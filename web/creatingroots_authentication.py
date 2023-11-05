@@ -3,7 +3,7 @@ import os
 
 
 auth = Blueprint("auth", __name__)
-views = Blueprint("views", __name__)
+#views = Blueprint("views", __name__)
 
 @auth.route("/login")
 def login():
@@ -15,7 +15,7 @@ def logout():
     return "<a href='/'>Home</a>"
     return "<p>Logout</p>"
 
-@views.route("/sign-up", methods=['GET', 'POST'])
+@auth.route("/sign-up", methods=['GET', 'POST'])
 def signup():
     fn = request.form.get("fname")
     ln = request.form.get("lname")
