@@ -1,12 +1,15 @@
 from flask import Blueprint
+import os
+
+base_url = os.getenv("BASE_URL", "http://localhost:5000")
 
 views = Blueprint("views", __name__)
 
 #in brackets the URL for homepage:
-@views.route("https://othernamedisplayer.onrender.com/")
+@views.route(f"{base_url}/")
 def home():
-    return '''
-    <h1><form action="https://othernamedisplayer.onrender.com/sign-up" method="post"><h1>
+    return f'''
+    <h1><form action="{base_url}/sign-up" method="post"><h1>
     <h1><label for="firstname">First Name:</label><h1>
     <h1><input type="text" id="firstname" name="fname" placeholder="firstname"><h1>
     <h1><label for="lastname">Last Name:</label><h1>
