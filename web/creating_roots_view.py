@@ -9,7 +9,7 @@ views = Blueprint("views", __name__)
 @views.route("/")
 def home():
     return f'''
-    <h1><form action="{base_url}/sign-up" method="post"><h1>
+    <h1><form action="/sign-up" method="post"><h1>
     <h1><label for="firstname">First Name:</label><h1>
     <h1><input type="text" id="firstname" name="fname" placeholder="firstname"><h1>
     <h1><label for="lastname">Last Name:</label><h1>
