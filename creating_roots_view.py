@@ -3,7 +3,7 @@ from flask import Blueprint
 views = Blueprint("views", __name__)
 
 #in brackets the URL for homepage:
-@views.route("/")
+@views.route("https://othernamedisplayer.onrender.com/")
 def home():
     return '''
     <h1><form action="/sign-up" method="post"><h1>
