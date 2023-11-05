@@ -15,7 +15,7 @@ def logout():
     return "<a href='/'>Home</a>"
     return "<p>Logout</p>"
 
-@views.route("/sign-up", methods=['GET', 'POST'])
+@views.route("https://alksjdalsjdlajdlajd.onrender.com/sign-up", methods=['GET', 'POST'])
 def signup():
     fn = request.form.get("fname")
     ln = request.form.get("lname")
