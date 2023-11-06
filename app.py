@@ -26,7 +26,7 @@ def about():
     except Exception as e:
         return str(e)
     
-    redirect("/about", code=302)
+    redirect(checkout_session.url, code=302)
 
  
     return render_template("about.html")
