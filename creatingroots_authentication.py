@@ -1,6 +1,9 @@
 from flask import Blueprint, request
 import os
 
+base_url = os.getenv("BASE_URL", "https://localhost:5000")
+base_url1 = os.getenv("BASE_URL1", "https://localhost:5000")
+
 
 auth = Blueprint("auth", __name__)
 #views = Blueprint("views", __name__)

@@ -1,7 +1,7 @@
 from flask import Blueprint
 import os
 
-base_url = os.getenv("BASE_URL", "//localhost:5000")
+base_url = os.getenv("BASE_URL", "https://localhost:5000")
 #https: nicht vergessen!!!
 views = Blueprint("views", __name__)
 

@@ -1,6 +1,6 @@
 from flask import Flask
-from web.creating_roots_view import views
-from web.creatingroots_authentication import auth
+from creating_roots_view import views
+from creatingroots_authentication import auth
 
 def create_app():
     app = Flask(__name__)
