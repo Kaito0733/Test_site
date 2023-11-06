@@ -18,7 +18,7 @@ def cancel():
 
 stripe.api_key = "sk_test_51O9WGMKnUl3LeHiq6xitimUjDwOkeop6iHlJBbQCGlRaU8ZmbxFnLJW2Y6zngeNZhROfzPAqmjHbcHEa8nyVL65i00Ah7Bz5qh"
 
-@app.route("/about", methods = ["POST", "GET"])
+@app.route("/about", methods = ["POST"])
 def about():
     try:
         checkout_session = stripe.checkout.Session.create(line_items = [{"price": "price_1O9WTBKnUl3LeHiqcJwEsJT1", "quantity": 1}], mode = "subscription", success_url = "https://kns-website-test357.onrender.com/success", cancel_url = "https://kns-website-test357.onrender.com/cancel")
