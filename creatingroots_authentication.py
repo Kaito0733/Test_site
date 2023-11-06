@@ -18,12 +18,12 @@ def logout():
     return "<a href='/'>Home</a>"
     return "<p>Logout</p>"
 
-@auth.route("/sign-up", methods=['GET', 'POST'])
+@auth.route("/signup", methods=['GET', 'POST'])
 def signup():
     fn = request.form.get("fname")
     ln = request.form.get("lname")
     return f"""
-    <h1><a href='/'>Home</a><h1>
+    <h1><a href=    <h1><a href={{ url_for('auth.home') }}>Home</a><h1>
     Your name is {fn} {ln}
     """
     return "<p>Sign up</p>"
