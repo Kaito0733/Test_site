@@ -1,4 +1,4 @@
-from flask import Blueprint
+from flask import Blueprint, render_template
 import os
 
 base_url = os.getenv("BASE_URL", "https://localhost:5000")
@@ -8,6 +8,9 @@ views = Blueprint("views", __name__)
 #in brackets the URL for homepage:
 @views.route("/")
 def home():
+    return render_template('index.html')
+
+
     return f'''
     <h1><form action="/sign-up" method="post"><h1>
     <h1><label for="firstname">First Name:</label><h1>
