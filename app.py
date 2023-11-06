@@ -21,7 +21,7 @@ stripe.api_key = "sk_test_51O9WGMKnUl3LeHiq6xitimUjDwOkeop6iHlJBbQCGlRaU8ZmbxFnL
 @app.route("/about")
 def about():
     try:
-        checkout_session = stripe.checkout.Session.create(line_items = [{"price": "price_1O9WTBKnUl3LeHiqcJwEsJT1", "quantity": 1}], mode = "subscription", success_url = "/success", cancel_url = "/cancel")
+        checkout_session = stripe.checkout.Session.create(line_items = [{"price": "price_1O9WTBKnUl3LeHiqcJwEsJT1", "quantity": 1}], mode = "subscription", success_url = "https://kns-website-test357.onrender.com/success", cancel_url = "https://kns-website-test357.onrender.com/cancel")
 
     except Exception as e:
         return str(e)
