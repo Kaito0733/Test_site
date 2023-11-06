@@ -9,4 +9,4 @@ MarkupSafe==2.1.3
 packaging==23.2
 values==2020.12.3
 Werkzeug==2.2.3
-stripe==2.2.2
+stripe==7.3.0
